@@ -1,0 +1,396 @@
+@font-face {
+  font-family: syne;
+  src: url(../../fonts/syne.ttf);
+}
+
+/* 📌 Personaliza el scroll en navegadores WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Grosor de la barra vertical */
+  height: 8px; /* Grosor de la barra horizontal */
+}
+
+/* 🔵 Fondo del scroll (track) con transparencia */
+::-webkit-scrollbar-track {
+  background: transparent; /* Fondo totalmente transparente */
+}
+
+/* ⚫ Barra deslizante (thumb) en negro */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.8); /* Negro con un poco de transparencia */
+  border-radius: 10px;
+}
+
+/* 🟣 Efecto hover en la barra deslizante */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 1); /* Negro sólido al pasar el mouse */
+}
+
+/* 🟡 Scroll en Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: syne;
+}
+
+.hero {
+  background-color: black;
+  background-image: linear-gradient(180deg, #00000000, #00000084),
+    url("img/pexels-pixabay-21969.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 30% 70%; /* 30% para la ID, 70% para el main */
+}
+
+.id {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  z-index: 2;
+}
+
+.id__card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 35px;
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+
+  border: 0.5px solid gray;
+
+  backdrop-filter: blur(3px); /* Aplica el desenfoque */
+  -webkit-backdrop-filter: blur(3px); /* Compatibilidad con Safari */
+}
+
+.id__card--img {
+  background-image: url(img/portafolio_2.png);
+  width: 250px;
+  height: 250px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin: 10px auto 0 auto;
+  box-shadow: 0 0 0 12px linear-gradient(45deg, #f600ff, #1920ca); /* gradiente en lugar de color sólido */
+}
+
+.id__card--name {
+  padding: 0 10px;
+  margin: 20px 0;
+}
+a {
+  text-decoration: none;
+}
+.id__card--button {
+  background: linear-gradient(90deg, #c70eff, #0015ff);
+  padding: 10px 70px;
+  color: white;
+  cursor: pointer;
+  border-radius: 15px;
+  text-decoration: none;
+  margin-top: -100; /* Empuja el botón hacia abajo */
+  font-family: syne;
+  transition: 0.3s;
+  border: 0.5px solid transparent;
+}
+
+.id__card--button:hover {
+  background: transparent; /* Fondo transparente */
+  color: transparent; /* Hace que el color del texto sea transparente */
+  border: 0.5px solid #c70eff; /* Mantiene el borde pero lo hace invisible */
+  color: white;
+}
+
+.main {
+  overflow-y: auto; /* Permite desplazamiento si el contenido es grande */
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+}
+
+/* 📌 Header */
+.header {
+  display: flex;
+  margin: 20px -50px;
+  padding: 20px 0;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 9999; /* Asegura que el header esté encima de todo */
+}
+
+/* 📌 Navegación */
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+}
+
+.nav__item {
+  display: inline;
+}
+
+/* 📌 Estilos de los enlaces */
+.nav__link {
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(3px); /* Aplica el desenfoque */
+  -webkit-backdrop-filter: blur(3px); /* Compatibilidad con Safari */
+}
+
+/* 🔹 Botón activo (Home) */
+.nav__link--active {
+  color: #fff;
+  border: 0.5px solid gray;
+  background-color: rgba(0, 0, 0, 0.1); /* Fondo más suave */
+}
+
+/* 🔹 Botón "Contact me" con borde en gradiente */
+.nav__link--contact {
+  color: #fff;
+  border: 0.5px solid transparent;
+  background-image: linear-gradient(black, black),
+    linear-gradient(45deg, #f600ff, #1920ca);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: 3s ease;
+}
+
+.nav__link--contact:hover {
+  color: #fff;
+  border: 0.5px solid transparent;
+  background-image: linear-gradient(45deg, #f600ff, #1920ca);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: 3s ease;
+  cursor: pointer;
+}
+
+/* 🔹 Efecto hover */
+.nav__link:hover {
+  color: #fff;
+}
+
+/*main*/
+
+.main__hero {
+  width: 70%;
+  height: 90vh;
+  margin-top: 10px;
+  margin-bottom: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  transform: translateY(20px); /* Desplazamiento inicial */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+i .uil-arrow-down {
+  animation: moverAbajo 2s infinite ease-in-out;
+}
+
+@keyframes moverAbajo {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.main__hero--title {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 20px;
+  margin-bottom: 10vh;
+}
+
+.hero__title--name {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+/*about*/
+
+.about {
+  width: 70%;
+  height: 90vh;
+  padding: 7vh 0;
+  margin-bottom: 30vh;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__data p {
+  font-family: syne;
+}
+
+.about__description {
+  font-family: syne;
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+  margin: 30px 0;
+}
+
+.section__title {
+  display: flex;
+  font-size: 15px;
+  color: #c7c6d3;
+  border: 0.5px solid gray;
+  background-color: rgba(0, 0, 0, 0.1); /* Fondo más suave */
+  width: 15%;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius: 15px;
+  margin-bottom: 100px;
+}
+
+.about__button {
+  background: linear-gradient(90deg, #c70eff, #0015ff);
+  padding: 10px 30px;
+  color: white;
+  cursor: pointer;
+  border-radius: 15px;
+  text-decoration: none;
+  margin-top: 10px; /* Empuja el botón hacia abajo */
+  font-family: syne;
+  transition: 0.3s;
+  border: 0.5px solid transparent;
+  width: 25%;
+  text-align: center;
+}
+
+.about__icon {
+  font-size: 30px;
+}
+
+.about__card img {
+  width: 150px;
+  height: 100px;
+  border: 0.2px solid gray;
+  background-color: rgba(0, 0, 0, 0.61); /* Fondo más suave */
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.fade {
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(20px); /* Desplazada hacia abajo */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade.visible {
+  opacity: 1; /* Aparece */
+  transform: translateY(0); /* Vuelve a su posición original */
+}
+
+.fade.hidden {
+  opacity: 0; /* Se oculta */
+  transform: translateY(20px); /* Se mueve hacia abajo otra vez */
+}
+
+.portafolio {
+  width: 70%;
+  height: 90vh;
+  padding: 7vh 0;
+}
+
+.contact {
+  width: 100vh;
+  height: 90vh;
+  color: white;
+  font-family: syne;
+}
+.formulario {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 9999;
+}
+
+/* Estilo general para los inputs */
+input,
+textarea {
+  font-family: "Syne", sans-serif;
+  background: #84848400; /* Fondo transparente */
+  border: none; /* Sin bordes */
+  border-bottom: 3px solid #383838; /* Solo borde inferior con opacidad */
+  margin: 10px;
+  color: #fff; /* Texto en color blanco */
+  font-size: 16px; /* Tamaño del texto */
+  padding: 10px 5px; /* Espaciado interno */
+  outline: none; /* Quitar borde de enfoque predeterminado */
+  width: 40%; /* Ocupar todo el ancho disponible */
+  transition: border-color 0.3s ease-in-out; /* Transición suave */
+  font-weight: 800;
+}
+
+/* Estilo general para los inputs */
+input::placeholder,
+textarea::placeholder {
+  font-family: "Syne", sans-serif;
+  border: none; /* Sin bordes */
+  color: #383838; /* Texto en color blanco */
+  font-size: 16px; /* Tamaño del texto */
+  padding: 10px 5px; /* Espaciado interno */
+  outline: none; /* Quitar borde de enfoque predeterminado */
+  width: 90%; /* Ocupar todo el ancho disponible */
+  font-weight: 800;
+}
+
+/* Estilo general para los inputs */
+input:focus,
+textarea:focus {
+  font-family: "Syne", sans-serif;
+
+  font-weight: 800;
+}
+
+.btn {
+  width: 300px;
+}
+
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Para que no tape tu contenido */
+}

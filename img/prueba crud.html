@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://localhost:8000/app/views/clientes.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prueba crud</title>
+    <link href="./prueba crud_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="./prueba crud_files/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+
+<body class="container">
+
+<div class="d-flex justify-content-end  "><a href="http://localhost:8000/config/logout.php" class="btn btn-danger mt-5">Cerrar sesion</a></div>
+    <form id="cliente__form">
+        <div class="mb-3 container">
+            <input type="hidden" class="form-control" id="id" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre </label>
+            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">E</th>
+            </tr>
+        </thead>
+        <tbody id="clientes__table">
+                  <tr>
+                  <th scope="row">7</th>
+                  <td>asdasd</td>
+                  <td>asdasd</td>
+                  <td>aasd@email.com</td>
+                  <td>
+                  <button class="btn btn-success edit" data-id="7" data-nombre="asdasd" data-apellido="asdasd" data-email="aasd@email.com">Edit</button>
+                  <button class="btn btn-danger delete" data-id="7">Delete</button>
+                  </td>
+                  </tr>
+                  </tbody>
+    </table>
+
+    <script src="./prueba crud_files/jquery.js"></script>
+    <script src="./prueba crud_files/app.js"></script>
+
+
+</body></html>
