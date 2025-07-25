@@ -1,14 +1,4 @@
-document.querySelector(".main").addEventListener(
-  "wheel",
-  function (event) {
-    event.preventDefault();
-    this.scrollBy({
-      top: event.deltaY * 2, // Reduce la velocidad del desplazamiento
-      behavior: "smooth",
-    });
-  },
-  { passive: false }
-);
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const elements = document.querySelectorAll(".fade"); // Selecciona todos los elementos con fade
@@ -106,3 +96,27 @@ tsParticles
   .catch((error) => {
     console.error("Error cargando tsParticles:", error);
   });
+
+
+  // Abrir modal
+  document.querySelectorAll(".zoom-img").forEach(img => {
+    img.addEventListener("click", () => {
+      const modal = document.getElementById("imgModal");
+      const modalImg = document.getElementById("modalImg");
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+
+  // Cerrar modal
+  function closeModal() {
+    document.getElementById("imgModal").style.display = "none";
+  }
+
+  // También cerrar haciendo clic fuera de la imagen
+  document.getElementById("imgModal").addEventListener("click", e => {
+    if (e.target.id === "imgModal") {
+      closeModal();
+    }
+  });
+
