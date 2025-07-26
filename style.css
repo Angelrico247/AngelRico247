@@ -3,57 +3,47 @@
   src: url(../../fonts/syne.ttf);
 }
 
-/* 📌 Personaliza el scroll en navegadores WebKit (Chrome, Edge, Safari) */
+/* Scroll personalizado */
 ::-webkit-scrollbar {
-  width: 8px; /* Grosor de la barra vertical */
-  height: 8px; /* Grosor de la barra horizontal */
+  width: 8px;
+  height: 8px;
 }
-
-/* 🔵 Fondo del scroll (track) con transparencia */
 ::-webkit-scrollbar-track {
-  background: transparent; /* Fondo totalmente transparente */
+  background: transparent;
 }
-
-/* ⚫ Barra deslizante (thumb) en negro */
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.8); /* Negro con un poco de transparencia */
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
 }
-
-/* 🟣 Efecto hover en la barra deslizante */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 1); /* Negro sólido al pasar el mouse */
+  background: black;
 }
-
-/* 🟡 Scroll en Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
 }
-
 body {
   font-family: syne;
 }
+a {
+  text-decoration: none;
+}
 
+/* Hero */
 .hero {
+  background: linear-gradient(180deg, #00000000, #00000084),
+              url("img/pexels-pixabay-21969.jpg") center/cover no-repeat;
   background-color: black;
-  background-image: linear-gradient(180deg, #00000000, #00000084),
-    url("img/pexels-pixabay-21969.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: 30% 70%; /* 30% para la ID, 70% para el main */
+  grid-template-columns: 30% 70%;
 }
 
+/* ID Card */
 .id {
   display: flex;
   flex-direction: column;
@@ -63,78 +53,90 @@ body {
   font-size: 24px;
   z-index: 2;
 }
-
 .id__card {
-  background-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 35px;
   width: 80%;
   height: 90%;
+  padding: 30px;
+  border: 0.5px solid gray;
+  backdrop-filter: blur(3px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
-
-  border: 0.5px solid gray;
-
-  backdrop-filter: blur(3px); /* Aplica el desenfoque */
-  -webkit-backdrop-filter: blur(3px); /* Compatibilidad con Safari */
 }
-
 .id__card--img {
-  background-image: url(img/portafolio_2.png);
+  background: url(img/portafolio_2.png) center/cover no-repeat;
   width: 250px;
   height: 250px;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
   border-radius: 50%;
-  margin: 10px auto 0 auto;
-  box-shadow: 0 0 0 12px linear-gradient(45deg, #f600ff, #1920ca); /* gradiente en lugar de color sólido */
+  margin: 10px auto 0;
+  box-shadow: 0 0 0 12px linear-gradient(45deg, #f600ff, #1920ca);
 }
-
 .id__card--name {
   padding: 0 10px;
   margin: 20px 0;
 }
-a {
-  text-decoration: none;
-}
-.id__card--button {
+.id__card--button,
+.about__button {
   background: linear-gradient(90deg, #c70eff, #0015ff);
-  padding: 10px 70px;
+  padding: 10px 30px;
+  width :350px;
   color: white;
   cursor: pointer;
   border-radius: 15px;
-  text-decoration: none;
-  margin-top: -100; /* Empuja el botón hacia abajo */
   font-family: syne;
   transition: 0.3s;
   border: 0.5px solid transparent;
+  text-align: center;
+  margin-top: 10px;
 }
-
-.id__card--button:hover {
-  background: transparent; /* Fondo transparente */
-  color: transparent; /* Hace que el color del texto sea transparente */
-  border: 0.5px solid #c70eff; /* Mantiene el borde pero lo hace invisible */
+.id__card--button:hover,
+.about__button:hover {
+  background: transparent;
   color: white;
+  border: 0.5px solid #c70eff;
 }
 
+/* Main */
 .main {
-  overflow-y: auto; /* Permite desplazamiento si el contenido es grande */
+  overflow-y: auto;
   padding: 20px;
   color: white;
   font-size: 20px;
 }
-
-/* 📌 Header */
-.header {
+.main__hero {
+  width: 70%;
+  height: 90vh;
   display: flex;
-  margin: 20px -50px;
-  padding: 20px 0;
+  flex-direction: column;
+  justify-content: end;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.main__hero--title {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 20px;
+  margin-bottom: 10vh;
+}
+.hero__title--name {
+  font-size: 50px;
+  font-weight: 700;
+}
+i .uil-arrow-down {
+  animation: moverAbajo 2s infinite ease-in-out;
+}
+@keyframes moverAbajo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
 }
 
+/* Nav */
 .nav {
+  margin-top: 5vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -175,364 +177,80 @@ a {
   background-color: rgba(0, 0, 0, 0.1); /* Fondo más suave */
 }
 
-/* 🔹 Botón "Contact me" con borde en gradiente */
-.nav__link--contact {
-  color: #fff;
-  border: 0.5px solid transparent;
-  background-image: linear-gradient(black, black),
-    linear-gradient(45deg, #f600ff, #1920ca);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  transition: 3s ease;
-}
 
-.nav__link--contact:hover {
-  color: #fff;
-  border: 0.5px solid transparent;
-  background-image: linear-gradient(45deg, #f600ff, #1920ca);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  transition: 3s ease;
-  cursor: pointer;
-}
 
 /* 🔹 Efecto hover */
 .nav__link:hover {
   color: #fff;
 }
 
-/*main*/
-
-.main__hero {
-  width: 70%;
-  height: 90vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  transform: translateY(20px); /* Desplazamiento inicial */
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-i .uil-arrow-down {
-  animation: moverAbajo 2s infinite ease-in-out;
-}
-
-@keyframes moverAbajo {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.main__hero--title {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  padding: 20px;
-  margin-bottom: 10vh;
-}
-
-.hero__title--name {
-  font-size: 50px;
-  font-weight: 700;
-}
-
-/*about*/
-
-.about {
+/* About */
+.about,
+.portafolio,
+.contact {
   width: 70%;
   height: 90vh;
   padding: 15vh 0;
 }
-
-.about__container {
-  display: flex;
-  flex-direction: column;
-}
-
-.about__data p {
-  font-family: syne;
-}
-
 .about__description {
-  font-family: syne;
-  font-weight: 400;
   font-size: 24px;
-  color: #fff;
+  font-weight: 400;
   margin: 30px 0;
+  color: white;
 }
-
 .section__title {
-  display: flex;
   font-size: 15px;
   color: #c7c6d3;
   border: 0.5px solid gray;
-  background-color: rgba(0, 0, 0, 0.1); /* Fondo más suave */
-  width: 15%;
-  text-align: center;
-  padding: 10px 10px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
   border-radius: 15px;
   margin-bottom: 100px;
-}
-
-.about__button {
-  background: linear-gradient(90deg, #c70eff, #0015ff);
-  padding: 10px 30px;
-  color: white;
-  cursor: pointer;
-  border-radius: 15px;
-  text-decoration: none;
-  margin-top: 10px; /* Empuja el botón hacia abajo */
-  font-family: syne;
-  transition: 0.3s;
-  border: 0.5px solid transparent;
-  width: 30%;
+  width: 15%;
   text-align: center;
 }
-
+.about__card img {
+  width: 150px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.61);
+  border: 0.2px solid gray;
+  border-radius: 15px;
+  padding: 20px;
+}
 .about__icon {
   font-size: 30px;
 }
 
-.about__card img {
-  width: 150px;
-  height: 100px;
-  border: 0.2px solid gray;
-  background-color: rgba(0, 0, 0, 0.61); /* Fondo más suave */
-  border-radius: 15px;
-  padding: 20px;
-}
-
+/* Fade */
 .fade {
-  opacity: 0; /* Inicialmente invisible */
-  transform: translateY(20px); /* Desplazada hacia abajo */
+  opacity: 0;
+  transform: translateY(20px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
-
 .fade.visible {
-  opacity: 1; /* Aparece */
-  transform: translateY(0); /* Vuelve a su posición original */
+  opacity: 1;
+  transform: translateY(0);
 }
-
 .fade.hidden {
-  opacity: 0; /* Se oculta */
-  transform: translateY(20px); /* Se mueve hacia abajo otra vez */
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-.portafolio {
-  width: 70%;
-  height: 90vh;
-  padding: 15vh 0;
-}
-
-.contact {
-  width: 100vh;
-  height: 100vh;
-  padding: 15vh 0;
-  color: white;
-  font-family: syne;
-}
-.formulario {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  z-index: 9999;
-}
-
-/* Estilo general para los inputs */
-input,
-textarea {
-  font-family: "Syne", sans-serif;
-  background: #84848400; /* Fondo transparente */
-  border: none; /* Sin bordes */
-  border-bottom: 3px solid #383838; /* Solo borde inferior con opacidad */
-  margin: 10px;
-  color: #fff; /* Texto en color blanco */
-  font-size: 16px; /* Tamaño del texto */
-  padding: 10px 5px; /* Espaciado interno */
-  outline: none; /* Quitar borde de enfoque predeterminado */
-  width: 40%; /* Ocupar todo el ancho disponible */
-  transition: border-color 0.3s ease-in-out; /* Transición suave */
-  font-weight: 800;
-}
-
-/* Estilo general para los inputs */
-input::placeholder,
-textarea::placeholder {
-  font-family: "Syne", sans-serif;
-  border: none; /* Sin bordes */
-  color: #383838; /* Texto en color blanco */
-  font-size: 16px; /* Tamaño del texto */
-  padding: 10px 5px; /* Espaciado interno */
-  outline: none; /* Quitar borde de enfoque predeterminado */
-  width: 90%; /* Ocupar todo el ancho disponible */
-  font-weight: 800;
-}
-
-/* Estilo general para los inputs */
-input:focus,
-textarea:focus {
-  font-family: "Syne", sans-serif;
-
-  font-weight: 800;
-}
-
-.btn {
-  width: 300px;
-}
 
 #tsparticles {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 0; /* Para que no tape tu contenido */
+  z-index: 0;
 }
 
-/* 🔄 Tablets (<= 1024px) */
-@media (max-width: 1024px) {
-
-  .header {
-    display: flex;
-    margin: 20px -50px;
-    padding: 20px 0;
-    display: none;
-  }
-  .hero {
-    text-align: center;
-    grid-template-columns: 1fr;
-    height: auto;
-    padding: 10vh 0;
-  }
-
-  .main {
-    padding: 10px;
-    
-  }
-
-  .main__hero {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    display: none;
-  }
-
-  .about,
-  .portafolio,
-  .contact {
-    text-align: center;
-    width: 90%;
-    height: auto;
-    padding: 10vh 0;
-    margin: auto;
-  }
-  .about__button{
-    margin: auto;
-  }
-
-  .section__title {
-    width: auto;
-  }
-
-  .formulario {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  input,
-  textarea {
-    width: 80%;
-  }
-
-  .btn {
-    width: 80%;
-  }
-}
-
-/* 📱 Teléfonos (<= 768px) */
-@media (max-width: 768px) {
-  .id__card {
-    width: 90%;
-    height: auto;
-    padding: 20px;
-  }
-
-  .id__card--img {
-    width: 180px;
-    height: 180px;
-  }
-
-  .hero__title--name {
-    font-size: 36px;
-  }
-
-  .nav__list {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .about__description {
-    font-size: 18px;
-  }
-
-  .about__button {
-    width: 70%;
-    padding: 10px;
-  }
-
-  .about__card img {
-    width: 100px;
-    height: auto;
-  }
-}
-
-/* 📱 Pantallas pequeñas (<= 480px) */
-@media (max-width: 480px) {
-  .id__card--name {
-    font-size: 18px;
-  }
-
-  .hero__title--name {
-    font-size: 28px;
-    text-align: center;
-  }
-
-  .nav__link {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-
-  .about__button {
-    font-size: 14px;
-    width: 90%;
-  }
-
-  input,
-  textarea {
-    font-size: 14px;
-    width: 100%;
-  }
-
-  .btn {
-    width: 100%;
-  }
-}
-
-
-/* Galería responsive estilo grid */
+/* Gallery */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   padding: 20px;
 }
-
-/* Tarjeta con sombra y redondeado */
 .card {
   background: white;
   border-radius: 10px;
@@ -543,55 +261,148 @@ textarea:focus {
   width: 30%;
   height: 150px;
 }
-
 .card:hover {
   transform: scale(1.03);
 }
-
-/* Imagen dentro de la tarjeta */
 .card img {
   width: 100%;
   height: auto;
   display: block;
 }
 
+/*modal*/
 .img-modal {
-  display: none;
   position: fixed;
-  z-index: 10000;
-  inset: 0; /* top: 0; right: 0; bottom: 0; left: 0 */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; /* Que ocupe toda la pantalla */
   background: rgba(0, 0, 0, 0.95);
-  overflow: auto; /* Habilita scroll si la imagen es más grande */
-  text-align: center;
-  padding: 40px 20px;
+  z-index: 99999;
+  display: none; /* Se activa con JS */
+  overflow: auto; /* Permite scroll si la imagen es más grande */
 }
 
 .modal-content {
-  display: inline-block;
-  max-width: none; /* Importante para que se vea completa */
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  display: block;
   margin: auto;
+  max-width: none;      /* 🚫 No limites el ancho */
+  max-height: none;     /* 🚫 No limites la altura */
+  width: auto;
+  height: auto;
 }
 
 .close-modal {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 30px;
   color: white;
   font-size: 40px;
-  font-weight: bold;
   cursor: pointer;
-  z-index: 10001;
+  z-index: 100000;
+}
+.about__container{
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+.about__button{
+  width: 250px;
 }
 
-/* Animación */
+
+/* Animación modal */
 @keyframes zoom {
-  from {
-    transform: scale(0.7);
+  from { transform: scale(0.7); }
+  to   { transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .header,
+  .main__hero {
+    display: none;
   }
-  to {
-    transform: scale(1);
+  .hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 10vh 0;
+    text-align: center;
+  }
+  .main {
+    padding: 10px;
+  }
+  .about,
+  .portafolio,
+  .contact {
+    width: 90%;
+    height: auto;
+    text-align: center;
+    padding: 10vh 0;
+    margin: auto;
+  }
+  .section__title {
+    width: auto;
+  }
+  .formulario {
+    flex-direction: column;
+    align-items: center;
+  }
+  input,
+  textarea,
+  .btn {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .id__card {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+  .id__card--img {
+    width: 180px;
+    height: 180px;
+  }
+  .hero__title--name {
+    font-size: 36px;
+  }
+  .nav__list {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .about__description {
+    font-size: 18px;
+  }
+  .about__button {
+    width: 50vw;
+    padding: 10px;
+  }
+  .about__card img {
+    width: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .id__card--name {
+    font-size: 18px;
+  }
+  .hero__title--name {
+    font-size: 28px;
+  }
+  .nav__link {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .about__button {
+    font-size: 14px;
+
+  }
+  input,
+  textarea,
+  .btn {
+    font-size: 14px;
+    width: 100%;
   }
 }
