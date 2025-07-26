@@ -82,7 +82,7 @@ a {
 .about__button {
   background: linear-gradient(90deg, #c70eff, #0015ff);
   padding: 10px 30px;
-  width :350px;
+  width :20vw;
   color: white;
   cursor: pointer;
   border-radius: 15px;
@@ -188,12 +188,13 @@ i .uil-arrow-down {
 .about,
 .portafolio,
 .contact {
-  width: 70%;
+  width: 100%;
   height: 90vh;
-  padding: 15vh 0;
+  padding: 15vh 15vh 15vw 0;
+  margin: 40vh 0;
 }
 .about__description {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   margin: 30px 0;
   color: white;
