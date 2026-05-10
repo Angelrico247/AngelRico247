@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/AngelRico247/static/css/main.0b88e187.css",
+    "main.js": "/AngelRico247/static/js/main.b2021f74.js",
+    "static/js/453.ff738306.chunk.js": "/AngelRico247/static/js/453.ff738306.chunk.js",
+    "static/media/IMG_8259.JPG": "/AngelRico247/static/media/IMG_8259.9cccb44fe73986a2f61b.JPG",
+    "static/media/CV_Rico_Castillo_Miguel_Angel.pdf": "/AngelRico247/static/media/CV_Rico_Castillo_Miguel_Angel.bf703fe041db4be0e8b3.pdf",
+    "static/media/javascript-logo.webp": "/AngelRico247/static/media/javascript-logo.631a636dd336b7463f9c.webp",
+    "static/media/sql.webp": "/AngelRico247/static/media/sql.8c051ca0cceac7545e97.webp",
+    "static/media/react.webp": "/AngelRico247/static/media/react.9d340e98e8f36352289d.webp",
+    "static/media/jquery.webp": "/AngelRico247/static/media/jquery.ae7606e78394404bc4e7.webp",
+    "static/media/logos_figma.webp": "/AngelRico247/static/media/logos_figma.0cb1107461a6e6392f7f.webp",
+    "static/media/php.webp": "/AngelRico247/static/media/php.75e05b9391a634469669.webp",
+    "static/media/sass.webp": "/AngelRico247/static/media/sass.9d74b58e605bddc7bebb.webp",
+    "static/media/cs.webp": "/AngelRico247/static/media/cs.e12806f50988909715e2.webp",
+    "static/media/bootstrap.webp": "/AngelRico247/static/media/bootstrap.a32d7e101c37872bfde9.webp",
+    "static/media/css-logo.webp": "/AngelRico247/static/media/css-logo.78cf1d0956b0876e5b8e.webp",
+    "static/media/taiwild.webp": "/AngelRico247/static/media/taiwild.b738b22f8ffbaf127e7f.webp",
+    "static/media/python.webp": "/AngelRico247/static/media/python.0b5c2ba8ada15c9675fb.webp",
+    "static/media/logo.svg": "/AngelRico247/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/webp": "/AngelRico247/static/media/5847f5bdcef1014c0b5e489c.a7d22155cae145cb9ffb.webp",
+    "static/media/typescript.webp": "/AngelRico247/static/media/typescript.d679d0a343261e0870d4.webp",
+    "index.html": "/AngelRico247/index.html",
+    "main.0b88e187.css.map": "/AngelRico247/static/css/main.0b88e187.css.map",
+    "main.b2021f74.js.map": "/AngelRico247/static/js/main.b2021f74.js.map",
+    "453.ff738306.chunk.js.map": "/AngelRico247/static/js/453.ff738306.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b88e187.css",
+    "static/js/main.b2021f74.js"
+  ]
+}
