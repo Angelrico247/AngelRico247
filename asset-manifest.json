@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/AngelRico247/static/css/main.0b88e187.css",
+    "main.css": "/AngelRico247/static/css/main.aeaff3d3.css",
     "main.js": "/AngelRico247/static/js/main.b2021f74.js",
     "static/js/453.ff738306.chunk.js": "/AngelRico247/static/js/453.ff738306.chunk.js",
     "static/media/IMG_8259.JPG": "/AngelRico247/static/media/IMG_8259.9cccb44fe73986a2f61b.JPG",
@@ -21,12 +21,12 @@
     "static/media/webp": "/AngelRico247/static/media/5847f5bdcef1014c0b5e489c.a7d22155cae145cb9ffb.webp",
     "static/media/typescript.webp": "/AngelRico247/static/media/typescript.d679d0a343261e0870d4.webp",
     "index.html": "/AngelRico247/index.html",
-    "main.0b88e187.css.map": "/AngelRico247/static/css/main.0b88e187.css.map",
+    "main.aeaff3d3.css.map": "/AngelRico247/static/css/main.aeaff3d3.css.map",
     "main.b2021f74.js.map": "/AngelRico247/static/js/main.b2021f74.js.map",
     "453.ff738306.chunk.js.map": "/AngelRico247/static/js/453.ff738306.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b88e187.css",
+    "static/css/main.aeaff3d3.css",
     "static/js/main.b2021f74.js"
   ]
 }
