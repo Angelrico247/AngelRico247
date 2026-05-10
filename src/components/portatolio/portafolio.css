@@ -1,0 +1,144 @@
+/* Contenedor Principal */
+.portafolio {
+    padding: 6rem 0 2rem;
+    text-align: center;
+    height: 90vh;
+    padding: 20vh 0;
+}
+
+/* Grid de Tarjetas */
+.cards__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo automático */
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* La Tarjeta */
+.card {
+    background-color: #fff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Sombra suave como en tus Skills */
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Texto alineado a la izquierda dentro de la tarjeta */
+}
+
+/* Imagen del Proyecto */
+.card__img {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: #f3f3f3; /* Color de fondo mientras carga la imagen */
+}
+
+/* Contenido de la Tarjeta */
+.card__content {
+    padding: 1.5rem;
+}
+
+.card__content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Estilos del Modal Reutilizable *//* Estilos del Modal Reutilizable */
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Un poco más claro para que el blur destaque */
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal__content {
+    background: #fff;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 2.5rem; /* Bordes más orgánicos */
+    position: relative;
+    padding: 3rem 2rem; /* Más espacio arriba y abajo */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+    text-align: center; /* Centra todo el contenido */
+}
+
+/* Alineación de los elementos internos */
+.modal__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.modal__description {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.modal__stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.stack__tag {
+    background: #f2f2f2;
+    color: #333;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* El Botón Estilo Agencia */
+.button {
+    display: inline-block;
+    background-color: #1a1a1a; /* Negro elegante */
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-decoration: none;
+    margin-top: 1rem; /* Quitamos el 10vh */
+}
+
+.button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.modal__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: transparent;
+}
+
+.modal__close:hover {
+    transform: scale(1.1);
+}

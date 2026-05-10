@@ -1,0 +1,72 @@
+.contact__container{
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.contact__text{
+    width: 500px;
+    padding: 50px 0;
+    
+}
+
+.form-content{
+    color: black;
+    height:auto;
+    width: 500px;
+    
+    
+}
+
+.form-content h2{
+    color: black;
+    font-weight: 300;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+    
+}
+
+.formulario input{
+    background-color: #ffffff1a;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding:0 5px;
+    height: 30px;
+    border:1px solid black;
+}
+
+.formulario #coments{
+    height: 100px;
+}
+
+textarea{
+    background-color: #ffffff1a;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: white;
+}
+
+.btn{
+    text-align: center;
+    width:150px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover{
+    
+    background-color: black;
+    color: white;
+}
+
+:focus{
+    outline: 1px solid rgba(0, 0, 0, 0.596);
+    cursor: pointer;
+}
