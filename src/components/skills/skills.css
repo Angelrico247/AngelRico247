@@ -1,6 +1,7 @@
 
 .skills{
-    height: 90vh;
+    min-height: 90vh;
+    height: auto;
     padding: 20vh 0;
 }
 .frontend__container{
